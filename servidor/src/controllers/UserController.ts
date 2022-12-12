@@ -46,6 +46,9 @@ class UserController {
     object.name = name.trim();
     object.mail = mail.trim();
     object.password = password.trim();
+    object.manager = idmaster.trim();
+    object.departments = departments.trim();
+
     if( profile !== ""){
         object.profile = profile;
     }
@@ -72,6 +75,8 @@ class UserController {
     if (usuario && usuario.iduser) {
       usuario.mail = mail
       usuario.profile = profile
+      usuario.manager = idmaster
+      usuario.departaments = departments
       if (password!== "") {
         usuario.password = password
       }
